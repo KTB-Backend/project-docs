@@ -2,7 +2,6 @@ name: Technical Decision
 description: 기술 선택 또는 설계 결정을 기록합니다.
 title: "[Decision] "
 labels: ["decision"]
-assignees: ""
 
 body:
   - type: input

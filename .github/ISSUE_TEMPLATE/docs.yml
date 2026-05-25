@@ -2,7 +2,6 @@ name: Docs
 description: 문서 작성, 수정, 정리 작업을 기록합니다.
 title: "[Docs] "
 labels: ["docs"]
-assignees: ""
 
 body:
   - type: input

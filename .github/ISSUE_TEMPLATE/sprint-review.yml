@@ -2,7 +2,6 @@ name: Sprint Review
 description: 스프린트 결과와 회고 내용을 기록합니다.
 title: "[Sprint Review] Sprint "
 labels: ["sprint", "retrospective"]
-assignees: ""
 
 body:
   - type: input

@@ -2,7 +2,6 @@ name: Troubleshooting
 description: 문제 발생 원인과 해결 과정을 기록합니다.
 title: "[Troubleshooting] YYYY-MM-DD - "
 labels: ["troubleshooting"]
-assignees: ""
 
 body:
   - type: input

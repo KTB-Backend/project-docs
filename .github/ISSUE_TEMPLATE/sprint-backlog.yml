@@ -2,7 +2,6 @@ name: Sprint Backlog
 description: 이번 스프린트의 목표, 작업 범위, 완료 조건을 정의합니다.
 title: "[Sprint Backlog] Sprint "
 labels: ["sprint", "planning"]
-assignees: ""
 
 body:
   - type: markdown

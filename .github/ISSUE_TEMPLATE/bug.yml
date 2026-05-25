@@ -1,0 +1,79 @@
+name: Bug
+description: 버그 또는 예상과 다른 동작을 기록합니다.
+title: "[Bug] "
+labels: ["bug"]
+assignees: ""
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        버그는 재현 조건과 기대 결과가 가장 중요합니다.
+
+  - type: input
+    id: bug-summary
+    attributes:
+      label: 버그 요약
+      placeholder: 예) 위치 입력 API 요청 시 500 에러 발생
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: 현재 동작
+      description: 실제로 어떤 문제가 발생했는지 작성해주세요.
+      placeholder: 예) 주소를 입력하고 요청하면 서버에서 500 Internal Server Error가 발생합니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 기대 동작
+      description: 원래 기대했던 동작을 작성해주세요.
+      placeholder: 예) 잘못된 주소인 경우 400 Bad Request와 에러 메시지를 반환해야 합니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 재현 방법
+      description: 버그를 재현하는 순서를 작성해주세요.
+      placeholder: |
+        1. 위치 입력 페이지로 이동
+        2. 빈 주소 입력
+        3. 저장 버튼 클릭
+        4. 500 에러 발생 확인
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 에러 로그
+      description: 관련 로그나 스크린샷이 있다면 첨부해주세요.
+      render: shell
+      placeholder: |
+        java.lang.NullPointerException: ...
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 발생 영역
+      options:
+        - Backend
+        - Frontend
+        - AI/RAG
+        - Infra
+        - Database
+        - Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 추가 정보
+      placeholder: 브라우저, 요청 데이터, 환경 정보 등을 작성해주세요.

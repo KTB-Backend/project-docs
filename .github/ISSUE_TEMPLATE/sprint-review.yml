@@ -1,0 +1,64 @@
+name: Sprint Review
+description: 스프린트 결과와 회고 내용을 기록합니다.
+title: "[Sprint Review] Sprint "
+labels: ["sprint", "retrospective"]
+assignees: ""
+
+body:
+  - type: input
+    id: sprint-name
+    attributes:
+      label: 스프린트 이름
+      placeholder: 예) Sprint 1 - 공통 기능 정의
+    validations:
+      required: true
+
+  - type: textarea
+    id: completed
+    attributes:
+      label: 완료한 작업
+      placeholder: |
+        - [x] 서비스 개요 작성
+        - [x] 공통 기능 정의서 작성
+        - [x] 각자 구현 repo 생성
+    validations:
+      required: true
+
+  - type: textarea
+    id: not-completed
+    attributes:
+      label: 완료하지 못한 작업
+      placeholder: |
+        - [ ] 장소 데이터 수집 방법 확정
+        - [ ] RAG 파이프라인 구조 결정
+    validations:
+      required: true
+
+  - type: textarea
+    id: learned
+    attributes:
+      label: 배운 점
+      placeholder: |
+        - 기능 정의를 먼저 맞추지 않으면 각자 구현 기준이 달라진다.
+        - RAG는 단순히 LLM을 붙이는 것이 아니라 검색 데이터 구조가 중요하다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvements
+    attributes:
+      label: 개선할 점
+      placeholder: |
+        - 다음 스프린트부터는 완료 조건을 더 구체적으로 작성한다.
+        - 기술 결정은 Discussion에 먼저 올리고 Issue로 확정한다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: next-actions
+    attributes:
+      label: 다음 스프린트 액션 아이템
+      placeholder: |
+        - [ ] 장소 데이터 수집 방식 결정
+        - [ ] 추천 API 명세 작성
+        - [ ] 각자 MVP 구현 시작

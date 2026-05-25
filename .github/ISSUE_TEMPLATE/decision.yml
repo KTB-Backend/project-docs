@@ -1,0 +1,83 @@
+name: Technical Decision
+description: 기술 선택 또는 설계 결정을 기록합니다.
+title: "[Decision] "
+labels: ["decision"]
+assignees: ""
+
+body:
+  - type: input
+    id: decision-summary
+    attributes:
+      label: 결정 주제
+      placeholder: 예) Vector DB로 Chroma를 사용할지 Pinecone을 사용할지 결정
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 배경
+      description: 이 결정을 해야 하는 이유를 작성해주세요.
+      placeholder: |
+        RAG 기반 장소 추천 기능을 구현하기 위해 장소 데이터를 임베딩하고 검색할 저장소가 필요합니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: 선택지
+      description: 고려한 대안을 작성해주세요.
+      placeholder: |
+        1. Chroma
+        2. Pinecone
+        3. PostgreSQL + pgvector
+        4. Elasticsearch
+    validations:
+      required: true
+
+  - type: textarea
+    id: criteria
+    attributes:
+      label: 판단 기준
+      placeholder: |
+        - 러닝 커브
+        - 무료 사용 가능 여부
+        - Spring Boot 연동 편의성
+        - 배포 난이도
+        - 검색 성능
+    validations:
+      required: true
+
+  - type: textarea
+    id: decision
+    attributes:
+      label: 최종 결정
+      placeholder: 예) 초기 MVP에서는 Chroma를 사용한다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: 결정 이유
+      placeholder: |
+        - 로컬 개발 환경에서 빠르게 구성 가능하다.
+        - 초기 MVP에서는 운영 복잡도보다 실험 속도가 중요하다.
+        - 추후 pgvector 또는 Pinecone으로 교체 가능하다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tradeoff
+    attributes:
+      label: 트레이드오프
+      placeholder: |
+        - 장점:
+        - 단점:
+        - 나중에 다시 검토할 조건:
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 참고 자료

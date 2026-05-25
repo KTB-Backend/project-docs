@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Project Discussion
+    url: https://github.com/KTB-Backend/project-docs/discussions
+    about: 기능 논의, 아이디어, 기술 결정 전 토론은 Discussion을 사용해주세요.

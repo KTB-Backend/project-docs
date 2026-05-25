@@ -1,0 +1,88 @@
+name: Feature
+description: 새로운 기능 또는 기능 개선 작업을 정의합니다.
+title: "[Feature] "
+labels: ["feature"]
+assignees: ""
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        기능의 목적, 구현 범위, 완료 조건을 명확히 작성해주세요.
+
+  - type: input
+    id: feature-summary
+    attributes:
+      label: 기능 요약
+      description: 구현하려는 기능을 한 문장으로 작성해주세요.
+      placeholder: 예) 사용자 출발 위치 입력 기능 구현
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 작업 목적
+      description: 이 기능이 왜 필요한지 작성해주세요.
+      placeholder: 예) 모임 참여자의 출발 위치를 기반으로 중간 지점을 계산하기 위해 필요합니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: 구현 항목
+      description: 구현해야 할 작업을 체크리스트로 작성해주세요.
+      placeholder: |
+        - [ ] 요청 DTO 작성
+        - [ ] 위치 입력 API 구현
+        - [ ] 주소 검증 로직 추가
+        - [ ] 테스트 코드 작성
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 완료 조건
+      description: 이 이슈가 완료되었다고 판단할 수 있는 기준을 작성해주세요.
+      placeholder: |
+        - [ ] 최소 2명 이상의 출발 위치를 입력할 수 있다.
+        - [ ] 주소가 비어 있으면 400 에러를 반환한다.
+        - [ ] 정상 요청 시 위치 정보가 저장된다.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 작업 영역
+      options:
+        - Backend
+        - Frontend
+        - AI/RAG
+        - Infra
+        - Docs
+        - Common
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 참고 자료
+      description: 관련 문서, 링크, Discussion, API 명세 등을 작성해주세요.
+      placeholder: |
+        - docs/02-feature-definition.md
+        - 관련 Discussion 링크

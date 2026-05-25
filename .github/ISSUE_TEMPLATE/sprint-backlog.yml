@@ -1,0 +1,97 @@
+name: Sprint Backlog
+description: 이번 스프린트의 목표, 작업 범위, 완료 조건을 정의합니다.
+title: "[Sprint Backlog] Sprint "
+labels: ["sprint", "planning"]
+assignees: ""
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        이번 스프린트에서 달성할 목표와 작업 범위를 정리해주세요.
+        실제 구현 작업은 별도 Feature / Docs / Research / Bug Issue로 분리하는 것을 권장합니다.
+
+  - type: input
+    id: sprint-name
+    attributes:
+      label: 스프린트 이름
+      placeholder: 예) Sprint 1 - 공통 기능 정의
+    validations:
+      required: true
+
+  - type: input
+    id: sprint-period
+    attributes:
+      label: 스프린트 기간
+      placeholder: 예) 2026-05-26 ~ 2026-06-01
+    validations:
+      required: true
+
+  - type: textarea
+    id: sprint-goal
+    attributes:
+      label: 스프린트 목표
+      description: 이번 스프린트에서 반드시 달성해야 하는 목표를 작성해주세요.
+      placeholder: |
+        예)
+        - 서비스의 핵심 기능 범위를 확정한다.
+        - 공통 기능 정의서를 작성한다.
+        - 각자 구현할 최소 기능 범위를 정한다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: backlog-items
+    attributes:
+      label: 백로그 항목
+      description: 이번 스프린트에 포함할 작업 목록을 작성해주세요.
+      placeholder: |
+        - [ ] [Docs] 서비스 개요 작성
+        - [ ] [Docs] 공통 기능 정의서 작성
+        - [ ] [Decision] RAG 적용 범위 결정
+        - [ ] [Research] 장소 데이터 수집 방법 조사
+        - [ ] [Feature] 위치 입력 기능 구현
+    validations:
+      required: true
+
+  - type: textarea
+    id: sprint-deliverables
+    attributes:
+      label: 산출물
+      description: 스프린트 종료 시 남아 있어야 하는 결과물을 작성해주세요.
+      placeholder: |
+        - README.md
+        - docs/01-service-overview.md
+        - docs/02-feature-definition.md
+        - docs/03-api-requirements.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: 완료 기준
+      description: 이번 스프린트가 완료되었다고 판단할 수 있는 기준을 작성해주세요.
+      placeholder: |
+        - [ ] 공통 기능 정의서가 작성되었다.
+        - [ ] 3명이 구현할 최소 기능 범위에 동의했다.
+        - [ ] 각자 구현 repo가 생성되었다.
+        - [ ] 다음 스프린트 작업 이슈가 등록되었다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: 예상 리스크
+      description: 이번 스프린트에서 막힐 수 있는 부분을 작성해주세요.
+      placeholder: |
+        - RAG 적용 범위가 너무 넓어질 수 있음
+        - 장소 데이터 수집 방식 결정이 늦어질 수 있음
+        - 각자 기술 스택 차이로 공통 API 기준이 흔들릴 수 있음
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 비고
+      placeholder: 추가로 기록할 내용이 있다면 작성해주세요.

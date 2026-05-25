@@ -1,0 +1,55 @@
+name: Docs
+description: 문서 작성, 수정, 정리 작업을 기록합니다.
+title: "[Docs] "
+labels: ["docs"]
+assignees: ""
+
+body:
+  - type: input
+    id: docs-summary
+    attributes:
+      label: 문서 작업 요약
+      placeholder: 예) 공통 기능 정의서 작성
+    validations:
+      required: true
+
+  - type: textarea
+    id: docs-purpose
+    attributes:
+      label: 작업 목적
+      placeholder: 예) 세 명이 동일한 기능 기준을 바탕으로 각자 구현하기 위해 공통 기능 정의서를 작성합니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: docs-scope
+    attributes:
+      label: 작성 / 수정할 내용
+      placeholder: |
+        - [ ] 서비스 개요 작성
+        - [ ] 핵심 기능 목록 작성
+        - [ ] 기능별 완료 조건 작성
+        - [ ] 예외 상황 정리
+    validations:
+      required: true
+
+  - type: input
+    id: target-file
+    attributes:
+      label: 대상 문서
+      placeholder: 예) docs/02-feature-definition.md
+
+  - type: dropdown
+    id: docs-type
+    attributes:
+      label: 문서 유형
+      options:
+        - 기능 정의서
+        - API 명세
+        - 아키텍처 문서
+        - 회고
+        - 트러블슈팅
+        - README
+        - 기타
+    validations:
+      required: true
